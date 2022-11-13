@@ -44,15 +44,14 @@ public class Base {
         driver.manage().deleteAllCookies();
         driver.navigate().to(url);
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     @BeforeMethod
     @Parameters({"browser","url"})
     public void setup(String browser,String url) {
-        testInitialize(browser,url);
+        testInitialize(browser, url);
     }
-
     @AfterMethod
     public void tearDown(ITestResult result) throws IOException {
         if(result.getStatus()==ITestResult.FAILURE){

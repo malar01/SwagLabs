@@ -1,4 +1,4 @@
-# Created at 2022-11-13T17:10:30.239
+# Created at 2022-11-13T19:48:09.527
 org.apache.maven.surefire.api.testset.TestSetFailedException: Suite file F:\IdeaProjects\SwagLabs\parameterizationtestng.xml is not a valid file
 	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.locateTestSets(TestNGXmlTestSuite.java:99)
 	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:118)

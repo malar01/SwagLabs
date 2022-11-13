@@ -17,8 +17,15 @@ public class YourCartPage extends ObjectUtility {
     @FindBy(xpath = "//span[text()='Your Cart']")
     WebElement your_cart;
 
+    @FindBy(xpath="//button[@id='checkout']")
+    WebElement checkout;
+
     public String getYourCartText() {
         String text=page.getText(your_cart);
         return text;
+    }
+    public CheckoutInfoPage clickOnCheckout(){
+        page.clickOnElement(checkout);
+        return new CheckoutInfoPage(driver);
     }
 }

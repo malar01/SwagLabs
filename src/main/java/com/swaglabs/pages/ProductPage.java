@@ -16,7 +16,7 @@ public class ProductPage extends ObjectUtility {
     }
 
 
-    @FindBy(xpath="//span[text()='Products']")
+    @FindBy(xpath = "//span[text()='Products']")
     WebElement products_page_text;
 
     @FindBy(xpath = "//button[@id='add-to-cart-sauce-labs-backpack']")
@@ -25,29 +25,31 @@ public class ProductPage extends ObjectUtility {
     @FindBy(xpath = "//button[@id='add-to-cart-sauce-labs-bike-light']")
     WebElement add_product_bike_light;
 
-    @FindBy(xpath="//button[@id='add-to-cart-sauce-labs-fleece-jacket']")
+    @FindBy(xpath = "//button[@id='add-to-cart-sauce-labs-fleece-jacket']")
     WebElement add_product_fleece_jacket;
 
-    @FindBy(xpath="//a[@class='shopping_cart_link']")
+    @FindBy(xpath = "//a[@class='shopping_cart_link']")
     WebElement add_to_cart;
 
 
-    public String getProductPageText(){
-        String title=page.getText(products_page_text);
+    public String getProductPageText() {
+        String title = page.getText(products_page_text);
         return title;
     }
+
     public void clickToAddProductBackpack() {
-    page.clickOnElement(add_product_backpack);
+        page.clickOnElement(add_product_backpack);
     }
-    public void clickToAddProductBikeLight(){
+
+    public void clickToAddProductBikeLight() {
         page.clickOnElement(add_product_bike_light);
     }
 
-    public void clickToAddProductFleeceJacket(){
+    public void clickToAddProductFleeceJacket() {
         page.clickOnElement(add_product_fleece_jacket);
     }
 
-    public YourCartPage clickAddToCart(){
+    public YourCartPage clickAddToCart() {
         page.clickOnElement(add_to_cart);
         return new YourCartPage(driver);
     }

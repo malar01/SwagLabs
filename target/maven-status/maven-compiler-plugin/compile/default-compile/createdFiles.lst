@@ -1,8 +1,11 @@
 com\swaglabs\pages\ProductPage.class
 com\swaglabs\pages\YourCartPage.class
 com\swaglabs\utilities\ExcelUtility.class
+com\swaglabs\pages\CheckoutOverviewPage.class
 com\swaglabs\automation\Base.class
 com\swaglabs\utilities\PageUtility.class
 com\swaglabs\utilities\WaitUtility.class
 com\swaglabs\utilities\ObjectUtility.class
+com\swaglabs\pages\CheckoutInfoPage.class
+com\swaglabs\pages\CheckoutCompletePage.class
 com\swaglabs\pages\LoginPage.class

@@ -23,13 +23,14 @@ public class LoginPage extends ObjectUtility {
     @FindBy(xpath="//input[@id='login-button']")
     WebElement login_button;
 
+    @FindBy(xpath="//h3[text()='Epic sadface: Sorry, this user has been locked out.']")
+    WebElement locked_out_error;
+
     public void enterUserName(String name) {
-        wait.waitUntilVisibilityOfElement(10,driver,username);
         page.enterText(username, name);
     }
 
     public void enterPassword(String pass) {
-        wait.waitUntilVisibilityOfElement(10,driver,password);
         page.enterText(password, pass);
     }
     public ProductPage clickLoginButton(){
@@ -37,5 +38,9 @@ public class LoginPage extends ObjectUtility {
         return new ProductPage(driver);
     }
 
+    public String getLockedOutMessage(){
+        String text=page.getText(locked_out_error);
+        return text;
+    }
 
 }
